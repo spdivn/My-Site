@@ -3031,6 +3031,7 @@ body {
   left: 0;
   right: 0;
   z-index: 1;
+  min-height: 700px;
   -webkit-background-size: cover;
           background-size: cover;
   -webkit-filter: blur(3px);
@@ -3052,36 +3053,64 @@ body {
   .title h1 {
     font-size: 64px; }
 
-.downArrow {
+.box {
+  width: 42px;
+  height: 80px;
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 50%;
-  width: 64px;
-  z-index: 2;
-  height: 64px;
-  margin-top: -32px;
-  /*set to a negative number 1/2 of your height*/
-  margin-left: -32px;
-  /*set to a negative number 1/2 of your width*/
-  border-radius: 50%;
-  cursor: pointer;
-  background-image: url(..//img/circle.png); }
-  .downArrow:hover {
+  z-index: 2; }
+  .box:hover {
     -webkit-animation: alternate ease-in-out animationDown 0.6s infinite;
             animation: alternate ease-in-out animationDown 0.6s infinite; }
 
+.downArrow {
+  width: 30px;
+  z-index: 2;
+  height: 30px;
+  margin-top: +15px;
+  margin-left: +6px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  cursor: pointer; }
+  .downArrow:before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    z-index: 2;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white; }
+  .downArrow:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    z-index: 2;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    top: 105%;
+    left: 105%;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white; }
+
 @-webkit-keyframes animationDown {
   from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); }
   to {
     -webkit-transform: translateY(25px);
             transform: translateY(25px); } }
 
 @keyframes animationDown {
   from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); }
   to {
     -webkit-transform: translateY(25px);
             transform: translateY(25px); } }

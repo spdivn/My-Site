@@ -1,11 +1,10 @@
 $(function () {
     updateResize();
-
     const templateImg = (data) => `url("${data}")`;
     const templateP = (data) => `<p>${data}</p>`;
 
     //Fetch images form json
-    $.ajax('/json/image.json')
+    $.ajax('/app/json/image.json')
         .done(function (items) {
             for (let index = 0; index < items.images.length - 1; index++) {
                 let parallax = $('<div>');
