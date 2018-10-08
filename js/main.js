@@ -22,7 +22,7 @@ $(function() {
     }
 
     //Fetch images form json
-    $.ajax('/app/json/image.json')
+    $.ajax('/json/image.json')
         .done(function(items) {
             for (let index = 0; index < items.images.length - 1; index++) {
                 let parallax = $('<div>');
